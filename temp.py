@@ -1,0 +1,1 @@
+C:\\Program Files\\Odoo 16.0.20240425\\server\\odoo\\addons,c:\\program files\\odoo 16.0.20240425\\sessions\\addons\\16.0,c:\\program files\\odoo 16.0.20240425\\server\\odoo\\addons,c:\\program files\\odoo 16.0.20240425\\server\\addons,F:\\belajar\\odoo16
