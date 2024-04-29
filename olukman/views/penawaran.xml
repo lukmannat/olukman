@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    
+        <record id= "olukman_action_penawaran" model="ir.actions.act_window">
+            <field name="name">Master penawaran</field>
+            <field name="res_model">olukman.penawaran</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem name="Penawaran" id="olukman.menu_penawaran" parent="olukman.menu_utama"
+            action="olukman_action_penawaran"
+        />
+
+
+
+
+        <!-- Penamaan _tree biasanya digunakan untuk view mode list  -->
+        <record id="model_penawaran_tree" model="ir.ui.view">
+            <field name="name">olukman_penawaran.view.tree</field>
+            <field name="model">olukman.penawaran</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="tgl"/>
+                    <field name="total"/>
+                    <field name="detail_ids"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <!-- Penamaan _tree biasanya digunakan untuk view mode list  -->
+        <record id="model_penawaran_form" model="ir.ui.view">
+            <field name="name">olukman_penawaran.view.form</field>
+            <field name="model">olukman.penawaran</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <group>
+                        <field name="name"/>
+                        <field name="tgl"/>
+                    </group>
+
+                    <field name="detail_ids">
+                        <tree editable="bottom">
+                            <field name="siswa_id"/>
+                            <field name="harga_detail"/>
+                            <field name="qty"/>
+                            <field name="subtotal"/>
+                        </tree>
+                        <form>
+                            <group col="3">
+                                <group class="bg-primary">
+                                    <field name="siswa_id"/>
+                                    <field name="harga_detail"/>
+                                </group>
+                                <group class="bg-success">
+                                    <field name="qty"/>
+                                    <field name="subtotal"/>
+                                </group>
+                                <group class="bg-info">
+                                    <field name="siswa_id"/>
+                                    <field name="harga_detail"/>
+                                </group>
+                                <group class="bg-warning">
+                                    <field name="qty"/>
+                                    <field name="subtotal"/>
+                                </group>
+                            </group>
+                        </form>
+                    </field>
+
+                    <group>
+                        <field name="total"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        
+
+
+
+    </data>
+</odoo>

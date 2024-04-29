@@ -12,6 +12,7 @@
     'data' : [
         'security/ir.model.access.csv',
         'views/siswa.xml',
+        'views/penawaran.xml',
     ],
 
 }
