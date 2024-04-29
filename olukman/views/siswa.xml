@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+       <record id="olukman_action_siswa" model="ir.actions.act_window">
+            <field name="name">Master Siswa</field>
+            <field name="res_model">olukman.siswa</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+  
+    <menuitem name="Sekolah" id="olukman.menu_utama"/>
+    
+    <menuitem name="Siswa" id="olukman.menu_siswa" parent="olukman.menu_utama" action="olukman_action_siswa"/>
+
+    
+    </data>
+    
+   
+</odoo>

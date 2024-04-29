@@ -9,5 +9,9 @@
     'website':  'kartini.co.id',
     'license': 'AGPL-3',
     'application': True,
+    'data' : [
+        'security/ir.model.access.csv',
+        'views/siswa.xml',
+    ],
 
 }

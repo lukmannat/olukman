@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_table_siswa_untuk_user,access_table_siswa_untuk_user,model_olukman_siswa,base.group_user,1,1,1,0
+access_table_siswa_untuk_admin,access_table_siswa_untuk_admin,model_olukman_siswa,base.group_system,1,1,1,1
