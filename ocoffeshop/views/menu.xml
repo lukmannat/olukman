@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record id= "ocoffeshop_action_produk" model="ir.actions.act_window">
+            <field name="name">Produk</field>
+            <field name="res_model">ocoffeshop.produk</field>
+            <field name="view_mode">tree,form</field>
+
+        </record>
+
+        <record id= "ocoffeshop_action_penjualan" model="ir.actions.act_window">
+            <field name="name"> Penjualan</field>
+            <field name="res_model">ocoffeshop.penjualan</field>
+            <field name="view_mode">tree,form,kanban</field>
+        </record>
+
+        <menuitem name=" Home CoffeShop" id="ocoffeshop.menu_utama" web_icon="ocoffeshop,static/images/coffe-shop-logos.jpg" action="ocoffeshop_action_produk"/>
+        
+        <menuitem name="Produk" id="ocoffeshop.menu_produk" parent="ocoffeshop.menu_utama"
+            action="ocoffeshop_action_produk"
+        />
+        
+        <menuitem name="Penjualan" id="ocoffeshop.menu_penjualan" parent="ocoffeshop.menu_utama"
+            action="ocoffeshop_action_penjualan"
+        />
+
+
+    </data>
+</odoo>

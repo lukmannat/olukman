@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="penjualan_seq" model="ir.sequence">
+      <field name="name">No Transaksi Penjualan</field>
+      <field name="code">penjualan_seq</field>
+      <field name="prefix">ABC-</field>
+      <field name="padding">6</field>
+      <field name="suffix">-XYZ</field>
+      <field name="number_next">3001</field>
+    </record>
+  </data>
+</odoo>

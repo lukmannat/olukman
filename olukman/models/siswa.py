@@ -2,10 +2,10 @@ from odoo import api, fields, models, _
 
 class Siswa(models.Model):
     _name = 'olukman.siswa'
-    _description = 'ini adalah master siswa'
+    _description = 'Ini adalah master siswa'
 
     name = fields.Char()
-    jumlah_pelajaran = fields.Integer(string='jumlah pelajaran yang diambil')
+    jumlah_pelajaran = fields.Integer(string='Jumlah pelajaran yang diambil')
     tinggi = fields.Integer()
     hobby = fields.Selection(string='Kesukaannya apa?', selection=[
         ('makan','Makan'),
@@ -15,4 +15,4 @@ class Siswa(models.Model):
 
     keterangan = fields.Text(readonly=True, default='Ini defaultnya', store=True)
 
-    harga =fields.Float("Harga yang disepakati")
+    harga =fields.Float("Harga yang disepakati antara siswa dan sekolah")

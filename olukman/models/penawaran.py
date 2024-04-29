@@ -1,11 +1,22 @@
 from odoo import api, fields, models, _
+from datetime import datetime, timedelta
+
 
 class Penawaran(models.Model):
     _name = 'olukman.penawaran'
     _description = 'ini model untuk penawaran model siswa'
 
-    name = fields.Char(string='Transaction No')
-    tgl = fields.Date()
+    name = fields.Char('Transaction No', default ='New' , readonly=True)
+    notes = fields.Text(default="ini adalah value default untuk field: notes")
+    
+    def default_tgl(self):
+        tgl = fields.Date.today()
+        return tgl
+
+    tgl = fields.Date(default=fields.Date.today())
+    tgl_kirim = fields.Date(default=datetime.today() + timedelta(days=3))
+
+
     total = fields.Float(compute='compute_total', store=True)
 
     @api.depends('detail_ids')
@@ -13,10 +24,19 @@ class Penawaran(models.Model):
         for record in self:
             total = 0
             for detail in record.detail_ids:
-                total = total + detail.subtotal
+                # total = total + detail.subtotal
+                total += detail.subtotal
             record.total = total 
 
     detail_ids = fields.One2many('olukman.penawaran.detail', 'penawaran_id', string='Detail')
+
+    # @api.model
+    # def create(self,vals):
+
+    #     if vals.get('name') != '' or vals.get('name') == 'New':
+        
+    #         tanggal_hari_ini = datetime.today().strftime('%Y%m%d')
+    #         name = self.env['ir.sequence'].next_by_code
 
 class PenawaranDetail(models.Model):
     _name = 'olukman.penawaran.detail'

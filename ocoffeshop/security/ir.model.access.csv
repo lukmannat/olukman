@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_table_produk_untuk_user,access_table_produk_untuk_user,model_ocoffeshop_produk,base.group_user,1,1,1,0
+access_table_produk_untuk_admin,access_table_produk_untuk_admin,model_ocoffeshop_produk,base.group_user,1,1,1,1
+access_untuk_penjualan_user,access_untuk_penjualan_user,model_ocoffeshop_penjualan,base.group_user,1,1,1,1
+access_untuk_penjualan_produk_user,access_untuk_penjualan_produk_user,model_ocoffeshop_penjualan_produk,base.group_user,1,1,1,1
